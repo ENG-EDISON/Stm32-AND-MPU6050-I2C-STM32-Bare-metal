@@ -1,0 +1,11 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\main.o"
+".\objects\i2c.o"
+".\objects\mpu6050.o"
+".\objects\uart.o"
+".\objects\startup_stm32f401xe.o"
+".\objects\system_stm32f4xx.o"
+--strict --scatter ".\Objects\USART_I2C.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\USART_I2C.map" -o .\Objects\USART_I2C.axf
